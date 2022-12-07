@@ -1,1 +1,10 @@
-body{background-color: aquamarine;}
+/* create varriables  */
+:root{
+    --yellow-color : #FFC244;
+    --green-color: #00A082;
+    --light-green-color: #E9F8F5;
+    --footer-color: #1D1D1D;
+}
+
+
+body{background-color: var(--yellow-color);}
