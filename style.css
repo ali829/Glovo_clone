@@ -1,10 +1,125 @@
+/* font import */
+@font-face {
+    font-family: Gotham;
+    src: url('/GothamBlack.otf');
+}
+
 /* create varriables  */
 :root{
     --yellow-color : #FFC244;
     --green-color: #00A082;
     --light-green-color: #E9F8F5;
     --footer-color: #1D1D1D;
+    --font-global:'Gotham';
+    --shadow-global: 0 3px 5px 0  rgba(0, 0, 0, 0.2);
 }
 
 
-body{background-color: var(--yellow-color);}
+body{
+    margin: 0;
+}
+
+/* nav bar styel  */
+.glv-navbar{
+    z-index: 0;
+    padding: 10px 20px;
+    background-color: var(--yellow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+svg.glovo-logo {
+    width: 138px;
+    padding: 14px 0;
+}
+
+.glv-get-started button {
+    background-color: var(--green-color);
+    appearance: none;
+    border: 0;
+    border-radius: 24px;
+    padding: 16px 38px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: var(--font-global);
+    box-shadow: var(--shadow-global);
+    cursor: pointer;
+    transition:all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.glv-get-started button:hover{
+    background-color: #00846b;
+}
+
+.glv-nav-text , .glv-nav-text-mobile{
+    color: #1D1D1D;
+    font-size: 20px;
+    font-family: var(--font-global);
+    font-weight: 300;
+}
+.glv-nav-text span , .glv-nav-text-mobile span{
+    position: relative;
+    z-index: 111111111;
+}
+.glv-nav-text span::after , .glv-nav-text-mobile span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: var(--light-green-color);
+}
+
+.glv-second-navbar{
+    padding: 10px 20px;
+    background-color: var(--yellow-color);
+}
+.glv-nav-text-mobile{
+    text-align: center;
+    display: none;
+}
+.glv-adresse-bar{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+.glv-adresse-bar div {
+    background-color: var(--green-color);
+    padding: 11px 20px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+}
+.glv-adresse-bar input {
+    padding: 1px 20px;
+    appearance: none;
+    height: 44px;
+    background: #ffffff;
+    border: 0;
+    width: 50%;
+    outline: none;
+    font-size: 100%;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Gotham';
+    letter-spacing: 1px;
+}
+
+
+
+
+/* responsive */
+
+@media only screen and (max-width: 800px){
+	.glv-nav-text{
+        display: none;
+    }
+    .glv-nav-text-mobile{
+        display: block;
+    }
+}
