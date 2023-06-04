@@ -1,48 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glovo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
-    
-
-<!-- nav bar -->
-<nav class="glv-navbar">
-    <div class="glv-logo">
-        <svg data-v-020e8c21="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 32" class="glovo-logo" data-test-id="header-logo-brand"><path data-v-020e8c21="" fill="#00A082" d="M0 20.944v-.062C0 14.947 4.527 9.917 10.894 9.917c3.169 0 5.28.758 7.211 2.152.363.273.755.787.755 1.514 0 1-.814 1.848-1.84 1.848-.483 0-.845-.211-1.147-.425-1.358-.998-2.836-1.666-5.13-1.666-3.892 0-6.85 3.424-6.85 7.482v.06c0 4.363 2.867 7.573 7.182 7.573 1.992 0 3.802-.636 5.1-1.605v-3.967H12.01c-.905 0-1.659-.698-1.659-1.606 0-.909.754-1.636 1.66-1.636h5.885c1.055 0 1.87.817 1.87 1.879v5.663c0 1.06-.422 1.818-1.298 2.363-1.811 1.212-4.346 2.302-7.513 2.302C4.345 31.848 0 27.123 0 20.944m23.093-9.905a1.8 1.8 0 0 1 1.81-1.818c1.026 0 1.842.818 1.842 1.818v18.78c0 1.03-.816 1.817-1.841 1.817a1.8 1.8 0 0 1-1.811-1.817v-18.78zm19.817 12.54v-.06c0-2.818-2.021-5.15-4.888-5.15-2.927 0-4.798 2.302-4.798 5.089v.06c0 2.787 2.022 5.119 4.858 5.119 2.957 0 4.828-2.302 4.828-5.058m-13.337 0v-.06c0-4.575 3.62-8.361 8.51-8.361 4.888 0 8.479 3.725 8.479 8.3v.06c0 4.544-3.621 8.33-8.54 8.33-4.86 0-8.449-3.725-8.449-8.269m26.105 8.209h-.18c-.997 0-1.661-.637-2.083-1.607l-5.31-12.206c-.092-.273-.212-.575-.212-.908 0-.91.815-1.757 1.81-1.757.996 0 1.51.574 1.811 1.333l4.104 10.6 4.164-10.66c.271-.636.755-1.273 1.72-1.273.996 0 1.78.757 1.78 1.757 0 .333-.12.697-.21.878L57.76 30.18c-.423.94-1.087 1.607-2.083 1.607m22.274-8.208v-.06c0-2.818-2.02-5.15-4.888-5.15-2.927 0-4.798 2.302-4.798 5.089v.06c0 2.787 2.022 5.119 4.86 5.119 2.955 0 4.826-2.302 4.826-5.058m-13.337 0v-.06c0-4.575 3.621-8.361 8.51-8.361 4.888 0 8.479 3.725 8.479 8.3v.06c0 4.544-3.62 8.33-8.54 8.33-4.858 0-8.449-3.725-8.449-8.269" class="glovo-logo__text--green"></path> <path data-v-020e8c21="" fill="#00A082" d="m90.661 9.961-.2.28-2.751 3.897-2.748-3.89-.201-.282a3.648 3.648 0 0 1 2.949-5.781 3.65 3.65 0 0 1 2.95 5.776M87.711.639c-3.956 0-7.171 3.23-7.171 7.199 0 1.511.468 2.962 1.351 4.195l.19.266 3.735 5.288s.455.747 1.448.747h.892c.995 0 1.448-.747 1.448-.747l3.732-5.289.19-.266a7.155 7.155 0 0 0 1.352-4.195c0-3.969-3.217-7.198-7.17-7.198M85.692 21.58v-.014c0-1.076.851-1.966 2-1.966 1.15 0 1.994.876 1.994 1.952v.014c0 1.067-.852 1.957-2.008 1.957-1.14 0-1.986-.875-1.986-1.943" class="glovo-logo__balloon--green"></path>
-        </svg>
-    </div>
-    <div class="glv-nav-text">
-        Enter your addres to know <span>what’s near you</span>
-    </div>
-    <div class="glv-get-started">
-        <button>
-            Get started
-        </button>
-    </div>
-</nav>
-<nav class="glv-second-navbar">
-    <div class="glv-nav-text-mobile">
-        Enter your addres to know <span>what’s near you</span>
-    </div>
-    <div class="glv-adresse-bar">
-        <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.16888 12.973H19.2773L15.0028 7.32145L19.2773 1.68091L5.16888 1.68091V11.0478L5.16888 22.125" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="nav-container">
+      <nav class="glv-navbar">
+        <div class="glv-logo">
+          <svg
+            data-v-020e8c21=""
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 95 32"
+            class="glovo-logo"
+            data-test-id="header-logo-brand"
+          >
+            <path
+              data-v-020e8c21=""
+              fill="#00A082"
+              d="M0 20.944v-.062C0 14.947 4.527 9.917 10.894 9.917c3.169 0 5.28.758 7.211 2.152.363.273.755.787.755 1.514 0 1-.814 1.848-1.84 1.848-.483 0-.845-.211-1.147-.425-1.358-.998-2.836-1.666-5.13-1.666-3.892 0-6.85 3.424-6.85 7.482v.06c0 4.363 2.867 7.573 7.182 7.573 1.992 0 3.802-.636 5.1-1.605v-3.967H12.01c-.905 0-1.659-.698-1.659-1.606 0-.909.754-1.636 1.66-1.636h5.885c1.055 0 1.87.817 1.87 1.879v5.663c0 1.06-.422 1.818-1.298 2.363-1.811 1.212-4.346 2.302-7.513 2.302C4.345 31.848 0 27.123 0 20.944m23.093-9.905a1.8 1.8 0 0 1 1.81-1.818c1.026 0 1.842.818 1.842 1.818v18.78c0 1.03-.816 1.817-1.841 1.817a1.8 1.8 0 0 1-1.811-1.817v-18.78zm19.817 12.54v-.06c0-2.818-2.021-5.15-4.888-5.15-2.927 0-4.798 2.302-4.798 5.089v.06c0 2.787 2.022 5.119 4.858 5.119 2.957 0 4.828-2.302 4.828-5.058m-13.337 0v-.06c0-4.575 3.62-8.361 8.51-8.361 4.888 0 8.479 3.725 8.479 8.3v.06c0 4.544-3.621 8.33-8.54 8.33-4.86 0-8.449-3.725-8.449-8.269m26.105 8.209h-.18c-.997 0-1.661-.637-2.083-1.607l-5.31-12.206c-.092-.273-.212-.575-.212-.908 0-.91.815-1.757 1.81-1.757.996 0 1.51.574 1.811 1.333l4.104 10.6 4.164-10.66c.271-.636.755-1.273 1.72-1.273.996 0 1.78.757 1.78 1.757 0 .333-.12.697-.21.878L57.76 30.18c-.423.94-1.087 1.607-2.083 1.607m22.274-8.208v-.06c0-2.818-2.02-5.15-4.888-5.15-2.927 0-4.798 2.302-4.798 5.089v.06c0 2.787 2.022 5.119 4.86 5.119 2.955 0 4.826-2.302 4.826-5.058m-13.337 0v-.06c0-4.575 3.621-8.361 8.51-8.361 4.888 0 8.479 3.725 8.479 8.3v.06c0 4.544-3.62 8.33-8.54 8.33-4.858 0-8.449-3.725-8.449-8.269"
+              class="glovo-logo__text--green"
+            ></path>
+            <path
+              data-v-020e8c21=""
+              fill="#00A082"
+              d="m90.661 9.961-.2.28-2.751 3.897-2.748-3.89-.201-.282a3.648 3.648 0 0 1 2.949-5.781 3.65 3.65 0 0 1 2.95 5.776M87.711.639c-3.956 0-7.171 3.23-7.171 7.199 0 1.511.468 2.962 1.351 4.195l.19.266 3.735 5.288s.455.747 1.448.747h.892c.995 0 1.448-.747 1.448-.747l3.732-5.289.19-.266a7.155 7.155 0 0 0 1.352-4.195c0-3.969-3.217-7.198-7.17-7.198M85.692 21.58v-.014c0-1.076.851-1.966 2-1.966 1.15 0 1.994.876 1.994 1.952v.014c0 1.067-.852 1.957-2.008 1.957-1.14 0-1.986-.875-1.986-1.943"
+              class="glovo-logo__balloon--green"
+            ></path>
+          </svg>
         </div>
-        <input type="text" placeholder="What's your adresse">
-    </div>
-</nav>
+        <div class="glv-nav-text">
+          Saisissez votre adresse pour voir
+          <span>ce qu'il y a dans le coin</span>
+        </div>
+        <div class="glv-get-started">
+          <button>Commencer</button>
+        </div>
+      </nav>
+      <nav class="glv-nav-mobile">
+        <div class="glv-nav-text-mobile">
+          Saisissez votre adresse pour voir
+          <span>ce qu'il y a dans le coin</span>
+        </div>
+      </nav>
+      <nav class="glv-adress-nav">
+        <div class="glv-adress-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.16888 12.973H19.2773L15.0028 7.32145L19.2773 1.68091L5.16888 1.68091V11.0478L5.16888 22.125"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="glv-adress-placeholder">Quelle est votre adresse ?</div>
+      </nav>
+    </nav>
 
+    <!-- header section -->
+    <header class="glv-header-container">
+      <div class="glv-header-gif">
+        <video loop="loop" muted="muted" autoplay="autoplay">
+          <source src="assets/img/address-container-animation.webm" />
+        </video>
+      </div>
+      <div class="glv-header-hero">
+        <h1>On vous livre plus que des repas</h1>
+        <p>Supermarchés, magasins, pharmacies, etc.</p>
+        <div class="adresse-input">
+          <div class="adresse-input-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.16888 12.973H19.2773L15.0028 7.32145L19.2773 1.68091L5.16888 1.68091V11.0478L5.16888 22.125"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="adresse-input-textfield">Quelle est votre adresse ?</div>
+          <div class="adresse-input-current-position">
+            <img src="assets/img/location.svg" alt="" srcset="" />
+            <div>Utiliser ma position</div>
+          </div>
+        </div>
+      </div>
+    </header>
 
+    <!-- first section : restaurants -->
+    <section class="glv-best-restaurants-container">
+      <h2 class="glv-best-restaurants-heading">
+        Maroc : Meilleurs restaurants et plus
+      </h2>
 
+      <div class="glv-best-restaurants-items">
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/mcdo.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">McDonald's</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/lyon_tacos.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Tacos de Lyon</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/kfc.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">KFC</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/burger_king.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Burger King</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/quick.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Quick</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/marjane.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Marjane</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/pizzahut.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Pizza Hut</div>
+        </div>
+        <div class="glv-best-restaurants-item">
+          <img src="assets/img/starbucks.avif" alt="" srcset="" />
+          <div class="glv-best-restaurants-name">Starbucks</div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- services -->
+    <section class="glv-services-container">
+      <h1>Faites livrer tout ce que vous voulez</h1>
+      <div class="services-items">
+        <div class="service-item">
+          <img src="/assets/img/restaurants.svg" alt="" srcset="" />
+          <h3>Les meilleurs restaurants de votre ville</h3>
+          <p>
+            Avec un grand choix de restaurants, vous trouverez toujours votre
+            plat préféré et
+            <span><mark> découvrirez de nouveaux restaurants !</mark></span>
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="/assets/img/delivery.svg" alt="" srcset="" />
+          <h3>Livraison rapide</h3>
+          <p>
+            Notre rapidité est notre fierté. Commandez ou envoyez ce que vous
+            voulez dans votre ville et
+            <span><mark> on vous livre en quelques minutes. </mark></span>
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="/assets/img/groceries.svg" alt="" srcset="" />
+          <h3>Vos courses et bien plus</h3>
+          <p>
+            rouvez tout ce qu'il vous faut !
+            <span
+              ><mark>Supermarchés, magasins, pharmacies, fleuristes</mark></span
+            >
+            ... Si ça se trouve dans votre ville, on y va pour vous.
+          </p>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; width: 100%">
+        <button class="glv-services-cla">Établissements proches</button>
+      </div>
+    </section>
+
+    <!-- landing links -->
+    <section class="glv-landing-links-container">
+      <img src="assets/img/cities.svg" class="glv-landing-links-cities" />
+      <h1 style="font-size: 40px">Meilleures villes : Maroc</h1>
+      <div class="glv-landing-links-cities-items">
+        <div class="glv-landing-links-cities-item">Casablanca</div>
+        <div class="glv-landing-links-cities-item">Rabat</div>
+        <div class="glv-landing-links-cities-item">Marrakech</div>
+        <div class="glv-landing-links-cities-item">Tanger</div>
+        <div class="glv-landing-links-cities-item">Agadir</div>
+        <div class="glv-landing-links-cities-item">Fès</div>
+        <div class="glv-landing-links-cities-item">Kénitra</div>
+        <div class="glv-landing-links-cities-item">Mohammédia</div>
+        <div class="glv-landing-links-cities-item">Dar Bouazza</div>
+        <div class="glv-landing-links-cities-item">Bouskoura</div>
+      </div>
+      <div style="display: flex; justify-content: center; width: 100%">
+        <button class="glv-services-cla">Voir toutes les villes</button>
+      </div>
+
+      <h1 style="font-size: 40px">Catégories populaires</h1>
+      <div class="glv-landing-links-cities-items">
+        <div class="glv-landing-links-cities-item">Pizza</div>
+        <div class="glv-landing-links-cities-item">Fleurs</div>
+        <div class="glv-landing-links-cities-item">Livres</div>
+        <div class="glv-landing-links-cities-item">Asiatique</div>
+        <div class="glv-landing-links-cities-item">Marocain</div>
+        <div class="glv-landing-links-cities-item">Petit-déjeuner</div>
+        <div class="glv-landing-links-cities-item">Parapharmacie</div>
+      </div>
+      <div style="display: flex; justify-content: center; width: 100%">
+        <button class="glv-services-cla">Voir toutes les catégories</button>
+      </div>
+
+      <h1 style="font-size: 40px">Marques populaires</h1>
+      <div class="glv-landing-links-cities-items">
+        <div class="glv-landing-links-cities-item">KFC</div>
+        <div class="glv-landing-links-cities-item">Burger King</div>
+        <div class="glv-landing-links-cities-item">McDonald's</div>
+        <div class="glv-landing-links-cities-item">Carrefour</div>
+      </div>
+    </section>
+
+    <!-- download section -->
+    <section class="glv-download-container">
+      <div class="glv-download-image">
+        <img src="/assets/img/download-app-desktop.avif" alt="" />
+      </div>
+      <div class="glv-download-os">
+        <img
+          src="https://res.cloudinary.com/glovoapp/image/fetch/q_30,f_auto,c_lpad,dpr_1.0,h_122,w_105,b_transparent/https://glovoapp.com/images/landing/download-app-logo.svg"
+          alt=""
+        />
+        <h1>Télécharger l'application</h1>
+        <p style="text-align: center">
+          Commandez ce qui vous fait plaisir et suivez la commande en temps réel
+          avec l'application Glovo.
+        </p>
+        <div class="downloadlink">
+          <a
+            href="https://app.adjust.com/xle4el?adgroup=&campaign=landing_ma_fr"
+          >
+            <img src="/assets/img/app-store-button.svg" alt="" />
+          </a>
+          <a
+            href="https://app.adjust.com/ule61n?redirect=http%3A%2F%2Fplay.google.com/store/apps/details?id=com.glovo&hl=es&adgroup=&campaign=landing_ma_fr"
+          >
+            <img src="/assets/img/google-play-button (1).svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- opportunity -->
+    <section class="glv-opportunity-container">
+      <img
+        class="glv-opportunity-logo"
+        src="assets/img/together (1).svg"
+        alt=""
+      />
+      <h1 style="text-align: center; height: 100%; font-size: 40px">
+        Opportunités
+      </h1>
+      <div class="glv-opportunity-items">
+        <div class="glv-opportunity-item">
+          <img src="/assets/img/rider-image.avif" alt="" />
+          <h3>Devenir coursier</h3>
+          <p>
+            C'est vous le chef ! Livrez avec Glovo pour gagner des revenus
+            compétitifs en toute flexibilité et liberté.
+          </p>
+          <button class="join-us-cla">Rejoignez-nous</button>
+        </div>
+        <div class="glv-opportunity-item">
+          <img src="/assets/img/partners-image.avif" alt="" />
+          <h3>Devenir partenaire</h3>
+          <p>
+            Grandissez avec Glovo ! Boostez les ventes et accédez à de nouvelles
+            opportunités grâce à notre technologie et à notre base
+            d'utilisateurs !
+          </p>
+          <button class="join-us-cla">Rejoignez-nous</button>
+        </div>
+        <div class="glv-opportunity-item">
+          <img src="/assets/img/careers-image.avif" alt="" />
+          <h3>Emploi</h3>
+          <p>
+            Vous cherchez un nouveau défi ? Si vous faites preuve d'ambition et
+            d'humilité et aimez travailler en équipe, contactez-nous !
+          </p>
+          <button class="join-us-cla">Rejoignez-nous</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <img src="assets/img/glovo-white.svg" alt="" />
+        <div class="footer-links-container">
+          <div class="footer-links-item">
+            <h2>Opportunités</h2>
+            <a href="">Emploi</a>
+            <a href="">Glovo pour les partenaires</a>
+            <a href="">Coursiers</a>
+            <a href="">Glovo Business</a>
+          </div>
+          <div class="footer-links-item">
+            <h2>Liens utiles</h2>
+            <a href="">À propos</a>
+            <a href="">FAQ</a>
+            <a href="">Glovo Prime</a>
+            <a href="">Blog</a>
+            <a href="">Nous contacter</a>
+            <a href="">Sécurité</a>
+          </div>
+          <div class="footer-links-item">
+            <h2>Nous suivre</h2>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Instagram</a>
+          </div>
+          <div class="footer-links-item">
+            <a href="">
+              <img src="assets/img/download-button-new.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="assets/img/download-button-new (1).svg" alt="" />
+            </a>
+            <a href="">CONDITIONS D'UTILISATION</a>
+            <a href="">POLITIQUE DE CONFIDENTIALITÉ</a>
+            <a href="">POLITIQUE EN MATIÈRE DE COOKIES</a>
+            <a href="">CONFORMITÉ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>

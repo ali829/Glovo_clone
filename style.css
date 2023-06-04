@@ -1,125 +1,585 @@
 /* font import */
 @font-face {
-    font-family: Gotham;
-    src: url('/GothamBlack.otf');
+  font-family: Gotham;
+  src: url("/GothamBlack.otf");
 }
 
 /* create varriables  */
-:root{
-    --yellow-color : #FFC244;
-    --green-color: #00A082;
-    --light-green-color: #E9F8F5;
-    --footer-color: #1D1D1D;
-    --font-global:'Gotham';
-    --shadow-global: 0 3px 5px 0  rgba(0, 0, 0, 0.2);
+:root {
+  --yellow-color: #ffc244;
+  --green-color: #00a082;
+  --light-green-color: #e9f8f5;
+  --footer-color: #1d1d1d;
+  --font-global: "Gotham";
+  --shadow-global: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  --mask-image: url("https://res.cloudinary.com/glovoapp/image/fetch/q_30,f_auto,c_lpad,dpr_1.0,h_121,w_128,b_transparent/https://glovoapp.com/images/landing/partners-mask.svg");
 }
 
-
-body{
-    margin: 0;
+body {
+  margin: 0;
+  font-family: var(--font-global);
+  box-sizing: border-box;
 }
 
 /* nav bar styel  */
-.glv-navbar{
-    z-index: 0;
-    padding: 10px 20px;
-    background-color: var(--yellow-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.glv-navbar,
+.glv-nav-mobile {
+  z-index: 0;
+  background-color: var(--yellow-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  z-index: 1111;
 }
+
+.glv-nav-mobile {
+  height: 0;
+}
+.nav-container {
+  position: fixed;
+  width: 100%;
+}
+
 svg.glovo-logo {
-    width: 138px;
-    padding: 14px 0;
+  width: 138px;
+  padding: 14px 0;
 }
 
-.glv-get-started button {
-    background-color: var(--green-color);
-    appearance: none;
-    border: 0;
-    border-radius: 24px;
-    padding: 16px 38px;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: var(--font-global);
-    box-shadow: var(--shadow-global);
-    cursor: pointer;
-    transition:all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+.glv-get-started button,
+.join-us-cla {
+  background-color: var(--green-color);
+  appearance: none;
+  border: 0;
+  border-radius: 24px;
+  padding: 16px 38px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: var(--font-global);
+  box-shadow: var(--shadow-global);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.glv-get-started button:hover{
-    background-color: #00846b;
+.glv-get-started button:hover {
+  background-color: #00846b;
 }
 
-.glv-nav-text , .glv-nav-text-mobile{
-    color: #1D1D1D;
-    font-size: 20px;
-    font-family: var(--font-global);
-    font-weight: 300;
+.glv-nav-text,
+.glv-nav-text-mobile {
+  color: #1d1d1d;
+  font-size: 20px;
+  font-family: var(--font-global);
+  font-weight: 300;
+  transition: all 0.3s ease-in;
+  opacity: 0;
 }
-.glv-nav-text span , .glv-nav-text-mobile span{
-    position: relative;
-    z-index: 111111111;
+.glv-nav-text-mobile {
+  display: none;
 }
-.glv-nav-text span::after , .glv-nav-text-mobile span::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 50%;
-    border-radius: 20px;
-    background-color: var(--light-green-color);
+.glv-nav-text.scrolled,
+.glv-nav-text-mobile.scrolled {
+  opacity: 1;
 }
-
-.glv-second-navbar{
-    padding: 10px 20px;
-    background-color: var(--yellow-color);
+.glv-nav-text span,
+.glv-nav-text-mobile span {
+  position: relative;
+  z-index: 111111111;
 }
-.glv-nav-text-mobile{
-    text-align: center;
-    display: none;
-}
-.glv-adresse-bar{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin: 15px;
-}
-.glv-adresse-bar div {
-    background-color: var(--green-color);
-    padding: 11px 20px;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    align-items: center;
-    border-radius: 8px 0 0 8px;
-}
-.glv-adresse-bar input {
-    padding: 1px 20px;
-    appearance: none;
-    height: 44px;
-    background: #ffffff;
-    border: 0;
-    width: 50%;
-    outline: none;
-    font-size: 100%;
-    border-radius: 0 8px 8px 0;
-    font-family: 'Gotham';
-    letter-spacing: 1px;
+.glv-nav-text span::after,
+.glv-nav-text-mobile span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background-color: var(--light-green-color);
 }
 
+.glv-adress-nav {
+  position: relative;
+  background-color: var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+  transform: translateY(-100px);
+  z-index: -111111;
+  transition: all 0.4s ease-out;
+}
+.glv-adress-nav.scrolled {
+  transform: translateY(0);
+}
 
+.glv-adress-nav .glv-adress-icon {
+  width: 60px;
+  height: 50px;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-left: 5px;
+}
+.glv-adress-nav .glv-adress-placeholder {
+  padding: 0 15px;
+  background-color: #ffffff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  cursor: pointer;
+}
 
+.glv-adress-nav .glv-adress-placeholder::before {
+  content: "";
+  height: 40%;
+  width: 1px;
+  background-color: #1d1d1d;
+  margin: 0 5px;
+  animation: cursor-tick 0.7s linear infinite;
+}
+
+/*============================= hedear =======================================*/
+.glv-header-container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  background-color: var(--yellow-color);
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 25.5%;
+  padding-bottom: 24px;
+  border-bottom: 74px solid transparent;
+  border-image-slice: 0 0 74;
+  border-image-source: url(assets/img/address-jumbotron-wave-desktop.svg);
+  background-clip: padding-box;
+}
+
+.glv-header-gif,
+.glv-header-hero {
+  width: 100%;
+  height: auto;
+}
+.glv-header-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.glv-header-gif video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.glv-header-hero h1 {
+  word-wrap: anywhere;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.07;
+  margin: 32px 0;
+  text-align: center;
+}
+.glv-header-hero p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.adresse-input {
+  display: flex;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.adresse-input .adresse-input-icon {
+  background-color: var(--green-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50px;
+}
+.adresse-input .adresse-input-textfield {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  color: #c1c1c1ff;
+  font-size: 16px;
+  flex-grow: 2;
+}
+.adresse-input .adresse-input-current-position {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.adresse-input .adresse-input-current-position div {
+  padding-left: 5px;
+  color: var(--green-color);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ===================best restaurants==================== */
+.glv-best-restaurants-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 100%;
+}
+.glv-best-restaurants-items {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 64px 32px;
+  grid-gap: 64px 32px;
+  width: 100%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  box-sizing: border-box;
+  place-items: center;
+}
+.glv-best-restaurants-item {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+.glv-best-restaurants-item img {
+  -webkit-mask-image: url(https://res.cloudinary.com/glovoapp/image/fetch/q_30,f_auto,c_lpad,dpr_1.0,h_121,w_128,b_transparent/https://glovoapp.com/images/landing/partners-mask.svg);
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 128px;
+  position: relative;
+  mask: var(--mask-image) no-repeat;
+  z-index: -111;
+}
+.glv-best-restaurants-name {
+  background-color: var(--yellow-color);
+  width: 100%;
+  margin: 0 auto;
+  transform: translateY(-60%);
+  padding: 4px 0;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  z-index: -11;
+}
+
+/* ===================services==================== */
+
+.services-items {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  place-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.service-item p span {
+  background-color: var(--yellow-color);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 1px;
+  border-radius: 100px;
+}
+.service-item p span mark {
+  background: transparent;
+}
+.glv-services-container h1 {
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.service-item p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  opacity: 0.8;
+  position: relative;
+  z-index: -11;
+}
+
+.glv-services-cla {
+  background-color: var(--green-color);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 16px 64px;
+  border: none;
+  appearance: none;
+  margin: 64px 0;
+  border-radius: 100px;
+  font-family: var(--font-global);
+  cursor: pointer;
+}
+
+/* ===================landing links==================== */
+.glv-landing-links-container {
+  width: 100%;
+  background-clip: padding-box;
+  border-bottom: 60px solid transparent;
+  border-top: 100px solid transparent;
+  border-image-slice: 100 0 60;
+  border-image-source: url(assets/img/landing-links-waves-desktop.svg);
+  background-color: var(--yellow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 7.5%;
+  box-sizing: border-box;
+}
+
+.glv-landing-links-cities-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  gap: 12px;
+}
+.glv-landing-links-cities-items .glv-landing-links-cities-item {
+  background-color: #fff3da;
+  border-radius: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+/* ===================download==================== */
+.glv-download-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateY(-8%);
+  z-index: -1;
+}
+.glv-download-os {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glv-download-image {
+  width: 100%;
+}
+.glv-download-image img {
+  aspect-ratio: 1;
+  height: 100%;
+  width: 100%;
+}
+
+/*=================== opportunity ===================*/
+
+.glv-opportunity-container {
+  --corporate-wave-desktop: url(assets/img/corporate-wave-desktop.svg);
+  background-clip: padding-box;
+  background-color: var(--light-green-color);
+  border-image-slice: 80 0 0;
+  border-image-source: var(--corporate-wave-desktop);
+  border-top: 80px solid transparent;
+  margin-bottom: -136px;
+  padding-bottom: 68px;
+  position: relative;
+  z-index: -11;
+}
+
+img.glv-opportunity-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -92%);
+}
+.glv-opportunity-items {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  margin: 64px;
+}
+
+.glv-opportunity-item {
+  width: 356px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.glv-opportunity-item img {
+  width: 100%;
+}
+
+/*=================== footer ===================*/
+footer {
+  --footer-wave-desktop: url(assets/img/footer-wave-desktop.svg);
+  background-clip: padding-box;
+  background-color: var(--footer-color);
+  border-image-slice: 68 0 0;
+  border-image-source: var(--footer-wave-desktop);
+  border-top: 80px solid transparent;
+  margin-bottom: -136px;
+  padding-bottom: 68px;
+  position: relative;
+  z-index: -11;
+}
+
+footer .footer-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: calc(1124px + 15%);
+  padding-bottom: var(--helio-space-5XL);
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  width: 100%;
+}
+.footer-links-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-links-container .footer-links-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  flex-direction: column;
+}
+.footer-links-container .footer-links-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0.8;
+  cursor: pointer;
+  margin: 12px 0;
+}
 
 /* responsive */
 
-@media only screen and (max-width: 800px){
-	.glv-nav-text{
-        display: none;
-    }
-    .glv-nav-text-mobile{
-        display: block;
-    }
+@media only screen and (max-width: 800px) {
+  .glv-nav-text {
+    display: none;
+  }
+  .glv-nav-mobile {
+    height: 80px;
+  }
+  .glv-nav-text-mobile {
+    text-align: center;
+    display: block;
+  }
+
+  .glv-navbar,
+  .glv-nav-mobile {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 50em) {
+  .glv-header-gif,
+  .glv-header-hero {
+    width: 50%;
+  }
+  .glv-header-container {
+    flex-direction: row;
+    padding-top: 48px;
+  }
+  .adresse-input {
+    flex-wrap: nowrap;
+  }
+
+  /* ===================best restaurants==================== */
+  .glv-best-restaurants-container {
+    padding: 48px 0;
+  }
+  .glv-best-restaurants-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ===================services==================== */
+  .glv-services-container {
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+
+  .services-items {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+  }
+  /* ===================download==================== */
+  .glv-download-container {
+    flex-direction: row-reverse;
+  }
+
+  .glv-download-image {
+    width: 50%;
+  }
+
+  .glv-download-os {
+    width: 50%;
+  }
+
+  /*=================== opportunity ===================*/
+  .glv-opportunity-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*=================== footer ===================*/
+
+  .footer-links-container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+@keyframes cursor-tick {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
